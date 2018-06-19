@@ -1,0 +1,58 @@
+buildscript {
+    repositories {
+        mavenLocal()
+		maven { url "http://maven.aliyun.com/nexus/content/groups/public/"}
+    }
+
+}
+
+//apply plugin: 'spring-boot'
+
+//bootRepackage {
+//    enabled = false
+//}
+
+apply plugin: 'java'
+apply plugin: "org.springframework.boot"
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+jar {
+    baseName = 'youou'
+    version = ''
+    manifest { attributes 'Main-Class': 'org.youou.test.Application' }
+    from configurations.runtime
+}
+
+description = 'youou-test'
+dependencies {
+    compile project(':youou-common')
+    compile project(':youou-rpc')
+    compile project(':youou-config')
+    compile project(':youou-registry')
+
+    compile("com.101tec:zkclient")
+
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-jdbc")
+    compile("org.springframework.boot:spring-boot-starter-test")
+    compile('org.springframework.boot:spring-boot-starter-undertow')
+    compile('org.springframework.boot:spring-boot-starter-mail')
+    compile('javax.servlet:javax.servlet-api')
+    compile ("io.springfox:springfox-swagger-ui")
+    compile ("io.springfox:springfox-swagger2")
+    compile("org.aspectj:aspectjweaver")
+    compile fileTree(dir: 'lib', include: '*.jar')
+    testCompile("junit:junit")
+
+}
+
+tasks.withType(JavaCompile) {
+	options.encoding = "UTF-8"
+}
+install{//
+    enabled = false
+}
+uploadArchives{//
+    enabled = false
+}

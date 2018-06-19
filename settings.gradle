@@ -1,0 +1,12 @@
+rootProject.name = 'youou'
+include ':youou-test'
+include ':youou-common'
+include ':youou-config'
+include ':youou-rpc'
+include ':youou-registry'
+
+project(':youou-test').projectDir = "$rootDir/youou-test" as File
+project(':youou-common').projectDir = "$rootDir/youou-common" as File
+project(':youou-config').projectDir = "$rootDir/youou-config" as File
+project(':youou-rpc').projectDir = "$rootDir/youou-rpc" as File
+project(':youou-registry').projectDir = "$rootDir/youou-registry" as File

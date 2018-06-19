@@ -1,0 +1,67 @@
+description = 'youou-common'
+
+dependencies {
+//    compile('org.slf4j:log4j-over-slf4j')
+//    compile('org.slf4j:slf4j-api')
+//    compile('org.springframework:spring-context')
+//    compile('org.springframework:spring-context-support')
+//    compile('org.springframework:spring-orm')
+//    compile('org.springframework:spring-beans')
+//    compile('org.springframework:spring-core')
+//    compile('org.springframework:spring-web')
+//
+//    compile('org.apache.commons:commons-dbcp2')
+//    compile('commons-io:commons-io')
+//    compile('org.apache.commons:commons-collections4')
+//    compile('org.apache.commons:commons-lang3')
+//    compile('cn.com.duiba:dcommons-base')
+//
+//
+//    compile('org.slf4j:log4j-over-slf4j')
+//    compile('org.slf4j:slf4j-api')
+//
+//    compile('cglib:cglib')
+//    compile('com.google.guava:guava')
+//    compile('cn.com.duiba:wolf')
+//    compile("com.101tec:zkclient")
+//
+//    compile("com.dangdang:elastic-job-core")
+//    compile("com.dangdang:elastic-job-spring")
+//
+//    compile("org.javassist:javassist")
+//
+//    compile("org.jboss.logging:jboss-logging")
+//    compile("javax.validation:validation-api")
+//
+//
+//    compile('org.projectlombok:lombok:1.6.10')
+//    compile("org.javatuples:javatuples:1.2")
+//    compile("org.jsoup:jsoup")
+//
+//
+//    compile('cn.com.duiba.boot:spring-boot-starter-mybatis')
+//    compile('cn.com.duiba.boot:spring-boot-starter-perftest')
+//    compile('cn.com.duiba.boot:spring-boot-starter-logger')
+//    compile('cn.com.duiba.boot:spring-boot-starter-redis')
+//    compile("org.javatuples:javatuples"){transitive = false}
+//
+//
+//    compile('io.shardingjdbc:sharding-jdbc-core')
+//    compile('io.shardingjdbc:sharding-jdbc-core-spring-namespace')
+//
+//
+//    compile('dom4j:dom4j')
+
+    testCompile('org.springframework:spring-test')
+}
+
+tasks.withType(JavaCompile) {
+  options.encoding = "UTF-8"
+}
+
+install{
+    enabled = false
+}
+uploadArchives{
+    enabled = false
+}

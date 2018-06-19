@@ -1,0 +1,47 @@
+description = 'youou-config'
+
+apply plugin: 'findbugs'
+
+dependencies {
+
+
+    compile("org.springframework.boot:spring-boot-starter-data-mongodb")
+    compile('org.springframework.boot:spring-boot-starter-mail')
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
+    compile 'org.springframework.cloud:spring-cloud-starter-config'
+    compile 'org.springframework.cloud:spring-cloud-starter-eureka'
+    compile 'org.springframework.cloud:spring-cloud-starter-hystrix'
+    compile 'org.springframework.cloud:spring-cloud-starter-ribbon'
+    compile 'org.springframework.cloud:spring-cloud-starter-feign'
+    compile ("io.springfox:springfox-swagger-ui")
+    compile ("io.springfox:springfox-swagger2")
+}
+findbugs{
+    ignoreFailures=true
+    findbugsTest.enabled=false
+}
+
+task findbugs(type: FindBugs) {//
+    ignoreFailures = true
+    effort = "default"
+    reportLevel = "medium"
+    //这里填写项目classes目录
+    classes = files("${project.rootDir}/youou-config/bin")
+    source = fileTree('src/main/java')
+    classpath = files()
+    reports {
+        //只能开启一个
+        xml.enabled = false
+        html.enabled = true
+    }
+}
+
+tasks.withType(JavaCompile) {
+	options.encoding = "UTF-8"
+}
+install{//
+    enabled = false
+}
+uploadArchives{//
+    enabled = false
+}

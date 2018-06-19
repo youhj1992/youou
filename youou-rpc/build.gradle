@@ -1,0 +1,11 @@
+description = 'youou-rpc'
+apply plugin: 'maven'
+dependencies {
+    compile('org.apache.commons:commons-lang3')
+    compile('org.apache.httpcomponents:httpclient')
+    compile('org.springframework:spring-web'){ transitive = false }
+}
+
+tasks.withType(JavaCompile) {
+  options.encoding = "UTF-8"
+}

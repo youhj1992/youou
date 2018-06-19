@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="activity-usercenter-api_main" target="1.8" />
+      <module name="activity-usercenter-api_test" target="1.8" />
+      <module name="activity-usercenter-biz_main" target="1.8" />
+      <module name="activity-usercenter-biz_test" target="1.8" />
+      <module name="activity-usercenter-common_main" target="1.8" />
+      <module name="activity-usercenter-common_test" target="1.8" />
+      <module name="activity-usercenter-deploy_main" target="1.8" />
+      <module name="activity-usercenter-deploy_test" target="1.8" />
+      <module name="tuia-activity-usercenter_main" target="1.8" />
+      <module name="tuia-activity-usercenter_test" target="1.8" />
+      <module name="youou-common_main" target="1.8" />
+      <module name="youou-common_test" target="1.8" />
+      <module name="youou-config_main" target="1.8" />
+      <module name="youou-config_test" target="1.8" />
+      <module name="youou-registry_main" target="1.8" />
+      <module name="youou-registry_test" target="1.8" />
+      <module name="youou-rpc_main" target="1.8" />
+      <module name="youou-rpc_test" target="1.8" />
+      <module name="youou-test_main" target="1.8" />
+      <module name="youou-test_test" target="1.8" />
+      <module name="youou_main" target="1.8" />
+      <module name="youou_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,184 @@
+
+buildscript {
+    repositories {
+        mavenLocal()
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/"}
+        mavenCentral()
+    }
+    dependencies {
+        classpath "io.spring.gradle:dependency-management-plugin:0.6.1.RELEASE"
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.5.10.RELEASE"
+    }
+}
+
+allprojects {
+    apply plugin: 'maven'
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'eclipse'
+    apply plugin: "io.spring.dependency-management"
+    test {
+        ignoreFailures = true
+    }
+
+    group = 'org.youou'
+
+    version = '0.0.1'
+
+}
+subprojects {
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    configurations{
+        all*.exclude group: 'log4j', module:'log4j'
+        all*.exclude group: 'org.slf4j', module: 'slf4j-log4j12'
+    }
+    dependencyManagement {
+        dependencies {
+            imports {
+                mavenBom 'org.springframework.boot:spring-boot-dependencies:1.5.10.RELEASE'
+                mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Edgware.SR2'
+            }
+
+            dependency('org.apache.zookeeper:zookeeper:3.4.8') {
+                exclude 'log4j:log4j'
+                exclude 'org.slf4j:slf4j-api'
+                exclude 'org.slf4j:slf4j-log4j12'
+            }
+
+
+            dependency 'javax.activation:activation:1.1.1'
+            dependency 'org.antlr:antlr:3.4'
+            dependency 'aopalliance:aopalliance:1.0'
+            dependency 'bsh:bsh:2.0b1'
+            dependency('com.101tec:zkclient:0.5') {
+                exclude 'log4j:log4j'
+                exclude 'org.slf4j:slf4j-api'
+                exclude 'org.slf4j:slf4j-log4j12'
+            }
+
+            dependency 'commons-beanutils:commons-beanutils:1.8.3'
+            dependency 'commons-cli:commons-cli:1.2'
+            dependency 'commons-codec:commons-codec:1.6'
+            dependency 'commons-collections:commons-collections:3.2'
+            dependency 'org.apache.commons:commons-dbcp2:2.1.1'
+            dependency 'org.jsoup:jsoup:1.11.2'
+            dependency 'commons-io:commons-io:2.4'
+            dependency 'commons-lang:commons-lang:2.6'
+            dependency 'commons-pool:commons-pool:1.6'
+            dependency 'commons-logging:commons-logging:1.1.2'
+            dependency 'org.apache.commons:commons-collections4:4.1'
+            dependency 'org.apache.commons:commons-lang3:3.4'
+
+
+            dependency 'joda-time:joda-time:2.9.3'
+
+            dependency 'javax.servlet:javax.servlet-api:3.1.0'
+            dependency 'org.aspectj:aspectjrt:1.8.9'
+            dependency 'org.aspectj:aspectjweaver:1.8.9'
+            // swagger
+            dependency("io.springfox:springfox-swagger-ui:2.5.0")
+            dependency("io.springfox:springfox-swagger2:2.5.0")
+
+            dependency 'org.apache.velocity:velocity:1.7'
+            dependency 'org.apache.velocity:velocity-tools:2.0'
+            dependency 'com.google.guava:guava:18.0'
+            dependency 'javax.validation:validation-api:1.1.0.Final'
+            dependency 'org.javassist:javassist:3.20.0-GA'
+
+
+            dependency ('com.dangdang:elastic-job-core:1.0.6'){
+                exclude 'c3p0:c3p0'
+            }
+            dependency 'com.dangdang:elastic-job-spring:1.0.6'
+
+
+
+            dependency ("org.javatuples:javatuples:1.2"){
+              exclude 'log4j:log4j'
+            }
+
+
+
+//            dependency 'io.netty:netty:3.10.4.Final'
+
+            dependency 'org.jboss.netty:netty:3.2.10.Final'
+            dependency 'javax.validation:validation-api:1.1.0.Final'
+
+
+            dependency 'org.jboss.logging:jboss-logging:3.3.0.Final'
+
+
+            //分表 sharding-jdbc
+            dependency('io.shardingjdbc:sharding-jdbc-core:2.0.1')
+            dependency('io.shardingjdbc:sharding-jdbc-core-spring-namespace:2.0.1')
+
+            dependency('dom4j:dom4j:1.6.1')
+
+        }
+    }
+
+    repositories {
+        mavenLocal()
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/"}
+    }
+
+
+//    uploadArchives {
+//        repositories {
+//            mavenDeployer {
+//                snapshotRepository(url: "http://nexus.dui88.com:8081/nexus/content/repositories/snapshots/") {
+//                    authentication(userName: "admin", password: "admin123")
+//                }
+//                repository(url: "http://nexus.dui88.com:8081/nexus/content/repositories/releases/") {
+//                    authentication(userName: "admin", password: "admin123")
+//                }
+//
+//                pom.project {
+//                    name project.name
+//                    packaging 'jar'
+//                    description 'notify client'
+//                    url 'www.duiba.com.cn'
+//
+//                    scm {
+//                        url ''
+//                        connection ''
+//                        developerConnection ''
+//                    }
+//
+//                    licenses {
+//                        license {
+//                            name 'No License'
+//                            url 'http://www.duiba.com.cn'
+//                            distribution 'repo'
+//                        }
+//                    }
+//
+//                    developers {
+//                        developer {
+//                            id 'xuhengfei'
+//                            name 'Hengfei Xu'
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
+
+    task sourcesJar(type: Jar, dependsOn: classes) {
+        classifier = 'sources'
+        from sourceSets.main.allSource
+    }
+
+    artifacts {
+        archives sourcesJar
+    }
+
+}
+
+
+
+
+
+

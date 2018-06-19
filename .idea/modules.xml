@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/youou.iml" filepath="$PROJECT_DIR$/.idea/modules/youou.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/youou-common/youou-common.iml" filepath="$PROJECT_DIR$/.idea/modules/youou-common/youou-common.iml" group="youou-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/youou-common/youou-common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/youou-common/youou-common_main.iml" group="youou-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/youou-common/youou-common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/youou-common/youou-common_test.iml" group="youou-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/youou-config/youou-config.iml" filepath="$PROJECT_DIR$/.idea/modules/youou-config/youou-config.iml" group="youou-config" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/youou-config/youou-config_main.iml" filepath="$PROJECT_DIR$/.idea/modules/youou-config/youou-config_main.iml" group="youou-config" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/youou-config/youou-config_test.iml" filepath="$PROJECT_DIR$/.idea/modules/youou-config/youou-config_test.iml" group="youou-config" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/youou-registry/youou-registry.iml" filepath="$PROJECT_DIR$/.idea/modules/youou-registry/youou-registry.iml" group="youou-registry" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/youou-registry/youou-registry_main.iml" filepath="$PROJECT_DIR$/.idea/modules/youou-registry/youou-registry_main.iml" group="youou-registry" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/youou-registry/youou-registry_test.iml" filepath="$PROJECT_DIR$/.idea/modules/youou-registry/youou-registry_test.iml" group="youou-registry" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/youou-rpc/youou-rpc.iml" filepath="$PROJECT_DIR$/.idea/modules/youou-rpc/youou-rpc.iml" group="youou-rpc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/youou-rpc/youou-rpc_main.iml" filepath="$PROJECT_DIR$/.idea/modules/youou-rpc/youou-rpc_main.iml" group="youou-rpc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/youou-rpc/youou-rpc_test.iml" filepath="$PROJECT_DIR$/.idea/modules/youou-rpc/youou-rpc_test.iml" group="youou-rpc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/youou-test/youou-test.iml" filepath="$PROJECT_DIR$/.idea/modules/youou-test/youou-test.iml" group="youou-test" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/youou-test/youou-test_main.iml" filepath="$PROJECT_DIR$/.idea/modules/youou-test/youou-test_main.iml" group="youou-test" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/youou-test/youou-test_test.iml" filepath="$PROJECT_DIR$/.idea/modules/youou-test/youou-test_test.iml" group="youou-test" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/youou_main.iml" filepath="$PROJECT_DIR$/.idea/modules/youou_main.iml" group="youou" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/youou_test.iml" filepath="$PROJECT_DIR$/.idea/modules/youou_test.iml" group="youou" />
+    </modules>
+  </component>
+</project>
